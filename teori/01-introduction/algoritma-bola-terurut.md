@@ -1,7 +1,6 @@
 Algoritma Bola terurut
 
 Asumsi : 
-- Boleh mengambil bola terlebih dahulu tanpa memperdulikan label angka nya dengan berurutan
 - Label angka ketiga bola nya adalah [1,2,3]
 
 1. Masukkan tangan kedalam sisi kotak yang berlubang
