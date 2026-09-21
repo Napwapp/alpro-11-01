@@ -2,7 +2,7 @@ Algoritma Bola terurut
 
 Asumsi : 
 - Boleh mengambil bola terlebih dahulu tanpa memperdulikan label angka nya dengan berurutan
-- Label angka nya adalah [1,2,3]
+- Label angka ketiga bola nya adalah [1,2,3]
 
 1. Masukkan tangan kedalam sisi kotak yang berlubang
 2. Cari salah satu bola
@@ -15,5 +15,5 @@ Asumsi :
 8. Jika mendapat angka 2
     - Susun ke meja pada posisi tengah
 9. Jika mendapat angka 3 
-    - Susun ke meja padaposisi paling kanan
+    - Susun ke meja pada posisi paling kanan
 10. Selesai
