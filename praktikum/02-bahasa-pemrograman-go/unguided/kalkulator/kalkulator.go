@@ -1,0 +1,30 @@
+package main
+
+import "fmt"
+
+func main () {
+	var (
+		a, b int
+	)
+
+	// Input 
+	fmt.Println("Masukkan 2 angka untuk menampilkan hasil operasi dari kedua angka tersebut (+, -, *, /, %) ")
+	fmt.Println("Masukkan angka pertama: ")
+	fmt.Scanln(&a)
+	fmt.Println("\nMasukkan angka kedua: ")
+	fmt.Scanln(&b)
+	if b == 0 {
+		fmt.Println("Angka kedua tidak boleh 0. Masukkan lagi: ")
+		fmt.Scanln(&b)
+	}
+
+	// Output menggunakan formatting 
+	// % merupakan placeholder yang akan menampilkan nilai dari argumen setelahnya sesuai urutan 
+	// d merupakan verb integer yang
+	fmt.Println("Hasil :")
+	fmt.Printf("\n%d + %d = %d\n", a, b, a + b)
+	fmt.Printf("%d - %d = %d\n", a, b, a - b)
+	fmt.Printf("%d * %d = %d\n", a, b, a * b)
+	fmt.Printf("%d / %d = %d\n", a, b, a / b)
+	fmt.Printf("%d %% %d = %d\n", a, b, a % b)
+}
