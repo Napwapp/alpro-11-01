@@ -16,9 +16,7 @@ func main() {
 		fmt.Println("\nMasukkan angka kedua: ")
 		fmt.Scanln(&b)
 
-		if b == 0 {
-			fmt.Println("Angka kedua tidak boleh 0. Silahkan coba lagi! ")
-		}
+		fmt.Println("Angka kedua tidak boleh 0. Silahkan coba lagi! ")
 	}
 	
 	// Output menggunakan formatting
