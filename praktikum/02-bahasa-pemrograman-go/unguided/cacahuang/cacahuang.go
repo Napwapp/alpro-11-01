@@ -4,8 +4,7 @@ import "fmt"
 
 func main () {
 	var (
-		uangRupiah int
-		lembar10rb, lembar5rb, lembar1rb int
+		uangRupiah, lembar10rb, lembar5rb, lembar1rb int
 	)
 
 	// Input

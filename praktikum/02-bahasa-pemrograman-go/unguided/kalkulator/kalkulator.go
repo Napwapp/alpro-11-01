@@ -12,11 +12,16 @@ func main() {
 	fmt.Println("Masukkan angka pertama: ")
 	fmt.Scanln(&a)
 
-	for b == 0 {
+	for {
 		fmt.Println("\nMasukkan angka kedua: ")
 		fmt.Scanln(&b)
 
-		fmt.Println("Angka kedua tidak boleh 0. Silahkan coba lagi! ")
+		if b == 0 {
+			fmt.Println("Angka kedua tidak boleh 0. Silahkan coba lagi! ")
+			continue
+		}
+
+		break
 	}
 	
 	// Output menggunakan formatting

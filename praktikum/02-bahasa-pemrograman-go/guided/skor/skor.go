@@ -22,5 +22,4 @@ func main() {
 	fmt.Println(nama)
 	fmt.Println(totalSkor)
 	fmt.Println(rataRata)
-
 }
