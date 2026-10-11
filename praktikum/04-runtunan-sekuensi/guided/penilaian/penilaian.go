@@ -9,13 +9,13 @@ func main() {
 		nama, grade    string
 		nilai, pilihan int
 	)
-	
+
 	fmt.Println("============= Menu =============")
 	fmt.Println("1. Sistem penilaian")
 	fmt.Println("0. Keluar")
 	fmt.Print("Pilih opsi: ")
 	fmt.Scanln(&pilihan)
-	
+
 	if pilihan == 1 {
 		fmt.Print("Masukkan Nama:")
 		scanner := bufio.NewScanner(os.Stdin)
@@ -37,7 +37,8 @@ func main() {
 			grade = "E"
 		}
 
-		fmt.Printf("Nama: %s \nNilai: %d \nGrade: %s", nama, nilai, grade)
+		fmt.Println(nama)
+		fmt.Println(grade)
 	} else if pilihan == 0 {
 		return
 	} else {

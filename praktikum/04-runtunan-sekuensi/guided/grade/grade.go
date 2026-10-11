@@ -30,5 +30,6 @@ func main() {
 		grade = "E"
 	}
 
-	fmt.Printf("Nama: %s\n Grade: %s", nama, grade)
+	fmt.Println(nama)
+	fmt.Println(grade)
 }
