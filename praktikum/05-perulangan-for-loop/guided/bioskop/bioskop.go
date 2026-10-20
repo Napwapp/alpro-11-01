@@ -10,14 +10,15 @@ func main() {
 
 	fmt.Scan(&jumlahTransaksi)
 	for i := 1; i <= jumlahTransaksi; i++ {
+		harga = 0
 		fmt.Printf("Transaksi ke-%d\n", i)
-		fmt.Println("Masukkan jenis film (Reguler, 3D, IMAX): ")
+		fmt.Print("Masukkan jenis film (Reguler, 3D, IMAX): ")
 		fmt.Scan(&jenis)
 
-		fmt.Println("Hari: ")
+		fmt.Print("Hari: ")
 		fmt.Scan(&hari)
 
-		fmt.Println("Jumlah Tiket")
+		fmt.Print("Jumlah Tiket: ")
 		fmt.Scan(&jumlahTiket)
 
 		if hari == "Senin" || hari == "Selasa" || hari == "Rabu" || hari == "Kamis" {
@@ -27,17 +28,21 @@ func main() {
 				harga = 60000
 			} else if jenis == "IMAX" {
 				harga = 80000
+			} else {
+				fmt.Println("Jenis film tidak valid")
 			}
-		}
-
-		if hari == "Jumat" || hari == "Sabtu" || hari == "Minggu" {
+		} else if hari == "Jumat" || hari == "Sabtu" || hari == "Minggu" {
 			if jenis == "Reguler" {
 				harga = 50000
 			} else if jenis == "3D" {
 				harga = 70000
 			} else if jenis == "IMAX" {
 				harga = 90000
+			} else {
+				fmt.Println("Jenis film tidak valid")
 			}
+		} else {
+			fmt.Println("Hari tidak valid")
 		}
 
 		totalHarga := harga * jumlahTiket
@@ -50,8 +55,11 @@ func main() {
 
 		totalPendapatan = totalPendapatan + totalHarga
 
-		fmt.Printf("Total Harga: %d\n", totalHarga)
-		fmt.Printf("Total Pendapatan: %d\n", totalPendapatan)
+		fmt.Printf("\n====================\n")
+		fmt.Println("Total Harga:",totalHarga)
 	}
+
+	fmt.Println("Total Pendapatan:",totalPendapatan)
+	fmt.Println("====================")
 
 }

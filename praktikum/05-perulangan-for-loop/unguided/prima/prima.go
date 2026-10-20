@@ -4,8 +4,7 @@ import "fmt"
 
 func main() {
 	var (
-		n, faktor int
-		is_prime  bool
+		n, jumlahFaktor int
 	)
 	fmt.Println("Masukkan Bilangan:")
 	fmt.Scan(&n)
@@ -17,20 +16,14 @@ func main() {
 
 	for i := 1; i <= n; i++ {
 		if n%i == 0 {
-			faktor = i
-			fmt.Printf("%d ", faktor)
+			fmt.Println(i)
+			jumlahFaktor++
 		}
 
-		if n%2 != 0 && n%i == 0 {
-			is_prime = true
+		if jumlahFaktor == 2 {
+			fmt.Printf("\n%d Merupakan bilangan prima", n)
 		} else {
-			is_prime = false
+			fmt.Printf("\n%d Bukan bilangan prima", n)
 		}
-	}
-
-	if is_prime == true {
-		fmt.Printf("\n%d Merupakan bilangan prima", n)
-	} else {
-		fmt.Printf("\n%d Bukan bilangan prima", n)
 	}
 }

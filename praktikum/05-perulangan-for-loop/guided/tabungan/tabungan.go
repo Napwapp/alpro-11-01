@@ -2,20 +2,17 @@ package main
 import "fmt"
 
 func main() {
-	var a, b, n int
+	var tabunganHariIni, b, n, total int
 
-	fmt.Scan(&a)
+	fmt.Scan(&tabunganHariIni)
 	fmt.Scan(&b)
 	fmt.Scan(&n)
 
-	total := 0
-	tabunganHariIni := a
-
 	for i := 1; i <= n; i++  {
+		fmt.Printf("Hari ke %d: %d\n", i, tabunganHariIni)
 		total = total + tabunganHariIni
 		tabunganHariIni = tabunganHariIni + b
-		fmt.Println(tabunganHariIni)
 	}
 
-	fmt.Print(total)
+	fmt.Print("Total: ", total)
 }

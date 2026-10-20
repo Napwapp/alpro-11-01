@@ -2,6 +2,23 @@ package main
 
 import "fmt"
 
+// Function untuk range nilai 1-4
+func bacaNilai(label string) int {
+	var nilai int
+
+	for {
+		fmt.Printf("%s: ", label)
+		fmt.Scan(&nilai)
+
+		// Rentang nilai 1-4
+		if nilai >= 1 && nilai <= 4 {
+			return nilai
+		}
+
+		fmt.Println("Masukkan nilai pada rentang 1-4. Coba lagi")
+	}
+}
+
 func main() {
 	var (
 		i, m, p, v, ga, fs, ci, tc, mahasiswaLulus int
@@ -16,23 +33,24 @@ func main() {
 	for i = 1; i <= m; i++ {
 		fmt.Printf("Masukkan nilai mahasiswa %d (1-4)\n", i)
 
-		// Rentang nilai 1-4
-		fmt.Print("P: "); fmt.Scan(&p)
-		fmt.Print("V: "); fmt.Scan(&v)
-		fmt.Print("GA: "); fmt.Scan(&ga)
-		fmt.Print("FS: "); fmt.Scan(&fs)
-		fmt.Print("CI: "); fmt.Scan(&ci)
-		fmt.Print("TC: "); fmt.Scan(&tc)
+		// panggil func bacaNilai untuk nilai supaya rentang 1-4 saja
+		p = bacaNilai("P")
+		v = bacaNilai("V")
+		ga = bacaNilai("GA")
+		fs = bacaNilai("FS")
+		ci = bacaNilai("CI")
+		tc = bacaNilai("TC")
 
 		// total dan avg
 		totalNilai := p + v + ga + fs + ci + tc
 		avg = float64(totalNilai) / 6
 
+		fmt.Printf("Nilai rata-rata mahasiswa ke-%d: %.2f\n\n", i, avg)
 		if avg >= 3.33 {
-			hasil = append(hasil, "Ya")
+			hasil = append(hasil, "Mendapatkan Sertifikat")
 			mahasiswaLulus++
 		} else {
-			hasil = append(hasil, "Tidak")
+			hasil = append(hasil, "Tidak Mendapatkan Sertifikat")
 		}
 	}
 
@@ -40,5 +58,5 @@ func main() {
 		fmt.Println(sertifikat)
 	}
 
-	fmt.Print(mahasiswaLulus)
+	fmt.Printf("%d Mahasiswa mendapatkan sertifikat", mahasiswaLulus)
 }

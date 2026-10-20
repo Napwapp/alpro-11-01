@@ -13,7 +13,7 @@ for ... {
 }
 ```
 
-Kode yang berada didalam `for{}` akan dieksekusi secara terus menerus dan berulang hingga suatu kondisi yang kita tentukan terpenuhi.
+Kode yang berada didalam `for{}` akan dieksekusi secara terus menerus dan berulang selama suatu kondisi yang kita tentukan terpenuhi.
 
 3 Komponen Perulangan:
 - Inisialisasi
