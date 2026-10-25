@@ -9,7 +9,7 @@ func main() {
     n := 1
     for n*n < batas {
         n++
-    }
+    } 
 
     fmt.Println(n - 1)
 }
