@@ -8,7 +8,9 @@ func main() {
 		hari, jenisHari, namaKategori string
 	)
 
-	kuota = 100
+	fmt.Print("Masukkan kuota tiket: ")
+	fmt.Scan(&kuota)
+	
 	terjual = 0
 	pendapatan = 0
 	transaksi = 0
