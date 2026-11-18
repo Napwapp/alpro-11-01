@@ -52,6 +52,8 @@ func main () {
 	fmt.Scan(&tahunLahir)
 	cariTahun(T, n, tahunLahir, &idx)
 
+	fmt.Println()
+
 	if idx != -1 {
 		fmt.Printf("%s %d %s Ditemukan di index ke-%d\n", T[idx].nama, T[idx].tahunLahir, T[idx].kotaAsal, idx)
 	} else {

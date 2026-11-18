@@ -5,62 +5,57 @@ import (
 	"unicode"
 )
 
-const NMAX = 1001
-
-type murid struct {
-	nama string
-}
-type tabMurid [NMAX]murid
+const NMAX int = 1001
+type tabMurid [NMAX]string
 
 func cariMurid(T tabMurid, n int, nama string, posisi *int, ketemu *bool) {
 	/*
 		I.S. T[0..n-1] dan nama terdefinisi
-		F.S. ketemu bernilai true dan posisi berisi urutan absen (mulai dari 1)
-		jika nama ditemukan; jika tidak, ketemu bernilai false
+		F.S. ketemu bernilai true dan posisi berisi urutan absen (mulai dari 1) jika nama ditemukan; jika tidak, ketemu bernilai false
 	*/
 
 	*ketemu = false
 	for i := 0; i < n; i++ {
-		if T[i].nama == nama {
+		if T[i] == nama {
 			*ketemu = true
 			*posisi = i + 1
 			return
 		}
 	}
-
 }
 
 func hitungHuruf(T tabMurid, n int, h byte, jumlah *int) {
-	/* 
+	/*
 		IS : T[0..n-1] dan h terdefinisi
 		FS : jumlah berisi banyaknya nama pada T yang diawali huruf h
 	*/
 
+	*jumlah = 0
 	for i := 0; i < n; i++ {
-		if T[i].nama != "" && T[i].nama[0] == h {
-			*jumlah++ 
-			return
+		if T[i] != "" && T[i][0] == h {
+			*jumlah++
 		}
 	}
 }
 
 func main() {
 	var (
-		T                 tabMurid
+		T tabMurid
 		n, posisi, jumlah int
-		nama              string
-		ketemu            bool
-		h                 byte
+		nama string
+		ketemu bool
+		h byte
 	)
 
-	// Daftar nama sejumlah n siswa
+	// Daftar nama sejumlah n murid
 	fmt.Scan(&n)
 	for i := 0; i < n; i++ {
-		fmt.Scan(&T[i].nama)
+		fmt.Scan(&T[i])
 	}
-
 	// Cari murid
 	fmt.Scan(&nama)
+	fmt.Println()
+	
 	cariMurid(T, n, nama, &posisi, &ketemu)
 	if ketemu {
 		fmt.Printf("Murid terdaftar dan berada di urutan absen ke-%d\n", posisi)
@@ -71,5 +66,5 @@ func main() {
 	// Hitung huruf
 	h = nama[0]
 	hitungHuruf(T, n, h, &jumlah)
-	fmt.Printf("Jumlah murid dengan huruf awal %c: %d", unicode.ToUpper(rune(h)), jumlah+1)
+	fmt.Printf("Jumlah murid dengan huruf awal %c: %d", unicode.ToUpper(rune(h)), jumlah)
 }

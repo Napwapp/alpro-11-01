@@ -63,8 +63,8 @@ func main() {
 }
 ```
 
-##### Output
-![Screenshot output](/praktikum/10-fungsi/tp/soal1/output.png)
+#### Output
+![Screenshot output](/praktikum/10-fungsi%20&%20prosedur/tp/fungsi/soal1/output.png)
 
 
 #### Deskripsi
@@ -187,8 +187,8 @@ func main() {
 }
 ```
 
-##### Output
-![Screenshot output](/praktikum/10-fungsi/tp/soal2/output.png)
+#### Output
+![Screenshot output](/praktikum/10-fungsi%20&%20prosedur/tp/fungsi/soal2/output.png)
 
 
 #### Deskripsi
