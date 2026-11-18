@@ -1,4 +1,4 @@
-# <h1 align="center">Tugas Pendahuluan Modul 10 - Fungi</h1>
+# <h1 align="center">Tugas Pendahuluan Modul 10 - Fungsi</h1>
 <p align="center">Muhamad Nawaf Abduh - 109092630003</p>
 
 ### 1. raport.go
