@@ -4,7 +4,7 @@ import "fmt"
 const NMAX int = 10000
 type Arr [NMAX]int
 
-func mengisiSapi(T *Arr, n int) {
+func bacaData(T *Arr, n int) {
 	for i := 0; i < n; i++ {
 		fmt.Scan(&T[i])
 	}
@@ -34,7 +34,7 @@ func main() {
 	)
 
 	fmt.Scan(&n, &k)
-	mengisiSapi(&T, n)
+	bacaData(&T, n)
 
 	k = k % n 
 	for i := 0; i < k ;i++ {
