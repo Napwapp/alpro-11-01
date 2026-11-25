@@ -1,4 +1,4 @@
-# <h1 align="center">Tugas Pendahuluan Modul 06 - Percabangan</h1>
+# <h1 align="center">Tugas Pendahuluan Modul 11 - Array</h1>
 <p align="center">Muhamad Nawaf Abduh - 109092630003</p>
 
 ### 1. pelamar.go
@@ -12,7 +12,6 @@ type applicant struct {
 	testGrade    float64
 	testDuration int
 }
-
 
 type applicants [NMAX]applicant
 
